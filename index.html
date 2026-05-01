@@ -11,54 +11,33 @@
 </head>
 <body>
 
-  <!-- Tela inicial: capa com fotos de aves -->
+  <!-- Tela inicial: capa simples com grade de aves -->
   <section class="tela-capa" id="telaCapa">
+    <div class="capa-wrap">
 
-    <!-- Aves decorativas espalhadas pela capa (cantos) -->
-    <div class="ave-deco ave-deco-1" style="background-image: url('banco-aves/arara-azul-grande.jpg');"></div>
-    <div class="ave-deco ave-deco-2" style="background-image: url('banco-aves/tucano-toco.jpg');"></div>
-    <div class="ave-deco ave-deco-3" style="background-image: url('banco-aves/curicaca.jpg');"></div>
-    <div class="ave-deco ave-deco-4" style="background-image: url('banco-aves/ema.jpg');"></div>
-    <div class="ave-deco ave-deco-5" style="background-image: url('banco-aves/papagaio-verdadeiro.jpg');"></div>
-    <div class="ave-deco ave-deco-6" style="background-image: url('banco-aves/coruja-buraqueira.jpg');"></div>
+      <p class="capa-eyebrow">Pesquisa Unesp · Cornell</p>
+      <h1 class="capa-h1">Meu Álbum de Pássaros do Cerrado</h1>
+      <p class="capa-sub">Uma viagem com asas pelo coração do Brasil</p>
 
-    <div class="capa-conteudo">
-
-      <p class="capa-orelha">Pesquisa Unesp · Cornell</p>
-
-      <h1 class="capa-titulo">
-        <span class="t-pequeno">Meu álbum de</span>
-        <span class="t-grande">PÁSSAROS</span>
-        <span class="t-pequeno">do</span>
-        <span class="t-grande">CERRADO</span>
-      </h1>
-
-      <div class="ornamento-divider">
-        <span class="o-line"></span>
-        <span class="o-dot"></span>
-        <span class="o-line"></span>
+      <div class="grade-aves">
+        <img src="banco-aves/seriema.jpg" alt="Seriema">
+        <img src="banco-aves/arara-azul-grande.jpg" alt="Arara-azul">
+        <img src="banco-aves/tucano-toco.jpg" alt="Tucano-toco">
+        <img src="banco-aves/curicaca.jpg" alt="Curicaca">
+        <img src="banco-aves/ema.jpg" alt="Ema">
+        <img src="banco-aves/papagaio-verdadeiro.jpg" alt="Papagaio">
       </div>
 
-      <p class="subtitulo">Uma viagem com asas pelo coração do Brasil</p>
-
-      <div class="foto-capa-rica">
-        <div class="foto-imagem" style="background-image: url('banco-aves/seriema.jpg');"></div>
-        <p class="foto-legenda">Seriema · símbolo do cerrado</p>
-      </div>
-
-      <div class="bloco-nome">
+      <div class="capa-form">
         <label for="inputNome">Qual é o seu nome?</label>
-        <input type="text" id="inputNome" placeholder="Escreva aqui..." value="Luiza" autocomplete="off">
-        <button class="btn-comecar" id="btnComecar">
-          <span>Começar minha jornada</span>
-          <span class="seta">→</span>
-        </button>
+        <input type="text" id="inputNome" value="Luiza" autocomplete="off">
+        <button class="btn-comecar" id="btnComecar">Começar minha jornada</button>
       </div>
 
-      <div class="capa-rodape">
-        <span class="selo-mockup">MOCKUP — PROJETO EM DESENVOLVIMENTO</span>
-        <span class="capa-credito">Desenvolvido por <strong>Ylvorix Digital Ltda</strong></span>
-      </div>
+      <p class="capa-foot">
+        <span class="capa-mockup">MOCKUP — PROJETO EM DESENVOLVIMENTO</span><br>
+        Desenvolvido por <strong>Ylvorix Digital Ltda</strong>
+      </p>
     </div>
   </section>
 
