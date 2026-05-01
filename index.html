@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Álbum de Pássaros do Cerrado</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -44,10 +44,11 @@
   <!-- App principal (sidebar + páginas) -->
   <main class="app" id="app">
 
-    <aside class="sidebar">
+    <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <h2>BANCO DE FIGURINHAS</h2>
         <p>Arraste a foto certa para cada pássaro</p>
+        <button class="btn-fechar-banco" id="btnFecharBanco" aria-label="Fechar banco">✕</button>
       </div>
       <div class="sidebar-busca">
         <input type="text" id="busca" placeholder="🔍 procurar pássaro...">
@@ -57,6 +58,7 @@
 
     <section class="principal">
       <div class="topbar">
+        <button class="btn-banco-mobile" id="btnAbrirBanco" aria-label="Abrir banco de figurinhas">🪶</button>
         <div class="topbar-info">
           <span class="ola">Olá, <strong id="nomeUsuario">amiga</strong>!</span>
         </div>
@@ -67,6 +69,7 @@
         </div>
         <button class="btn-imprimir" id="btnImprimir">🖨️ Imprimir álbum</button>
       </div>
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
       <div class="stage" id="stage"></div>
     </section>
@@ -74,7 +77,7 @@
 
   <div class="toast" id="toast"></div>
 
-  <script src="aves.js?v=3"></script>
-  <script src="app.js?v=3"></script>
+  <script src="aves.js?v=4"></script>
+  <script src="app.js?v=4"></script>
 </body>
 </html>

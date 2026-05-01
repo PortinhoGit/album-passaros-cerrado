@@ -11,7 +11,12 @@ window.AVES_DETALHADAS = [
     fato: "Quase não voa — prefere correr. Pode atingir 70 km/h nas pernas longas e ágeis.",
     curiosidade: 'Seu canto se ouve a 1 quilômetro de distância. Os antigos a chamavam de "relógio do cerrado" porque cantava em horários certos do dia.',
     cor_destaque: "#A0392E",
-    credito: "Charles J. Sharp / Wikimedia Commons / CC BY-SA 4.0"
+    credito: "Charles J. Sharp / Wikimedia Commons / CC BY-SA 4.0",
+    prompts: [
+      { titulo: "Imagina e escreve", texto: "A seriema corre rápido — quase não voa, mas alcança 70 km/h só com as pernas. Se você fosse a seriema por um dia, para onde correria? O que ia querer ver?" },
+      { titulo: "Pesquisa e descobre", texto: "A seriema é chamada de 'relógio do cerrado'. Pesquise sobre ela e escreva: o que ela come? Onde faz ninho? O que mais te surpreendeu?" },
+      { titulo: "Desenha com palavras", texto: "Sem usar a palavra 'seriema', descreva esse pássaro para alguém que nunca o viu. Que cores? Que sons? Que tamanho?" }
+    ]
   },
   {
     slug: "ema",
@@ -24,7 +29,12 @@ window.AVES_DETALHADAS = [
     fato: "É a maior ave do Brasil. Não voa, mas corre a 60 km/h em campo aberto.",
     curiosidade: "É o macho quem cuida dos ovos e dos filhotes. A mãe põe os ovos e segue caminho — o pai choca por mais de 40 dias.",
     cor_destaque: "#8B4513",
-    credito: "H. Zell / Wikimedia Commons / CC BY-SA 3.0"
+    credito: "H. Zell / Wikimedia Commons / CC BY-SA 3.0",
+    prompts: [
+      { titulo: "Imagina e escreve", texto: "Na ema, é o pai quem cuida dos filhotes — choca os ovos por mais de 40 dias. Quem cuida de você quando precisa? Como essa pessoa te lembra a ema?" },
+      { titulo: "Pesquisa e descobre", texto: "A ema é a maior ave do Brasil. Pesquise: por que ela não voa? Onde vive? O que a deixa diferente das outras aves grandes do mundo?" },
+      { titulo: "Inventa uma história", texto: "Imagine um filhote de ema que se perdeu do pai. Como a história continua? Escreva o começo, ou faça um desenho com legenda." }
+    ]
   },
   {
     slug: "arara-azul-grande",
@@ -37,7 +47,12 @@ window.AVES_DETALHADAS = [
     fato: "É a maior arara do mundo. Vive até 50 anos e escolhe um único parceiro para a vida toda.",
     curiosidade: "Sua mordida tem força de 90 quilos — quebra coquinho de macaúba sem esforço nenhum.",
     cor_destaque: "#2C5F8D",
-    credito: "Charles J. Sharp / Wikimedia Commons / CC BY-SA 4.0"
+    credito: "Charles J. Sharp / Wikimedia Commons / CC BY-SA 4.0",
+    prompts: [
+      { titulo: "Imagina e escreve", texto: "A arara-azul escolhe um par para a vida toda. Quem são as pessoas (ou bichos) que você quer ter por perto pra sempre? Por quê?" },
+      { titulo: "Pesquisa e descobre", texto: "Pesquise sobre a arara-azul: quase desapareceu do Brasil há alguns anos. O que aconteceu? Quem ajudou ela a voltar?" },
+      { titulo: "Cria uma palavra", texto: "Esse azul da arara não tem nome em português. Inventa um nome para essa cor — pode ser uma palavra nova, em qualquer língua que você quiser." }
+    ]
   },
   {
     slug: "tucano-toco",
@@ -50,7 +65,12 @@ window.AVES_DETALHADAS = [
     fato: "É o maior tucano do mundo. Seu bico pode ter 20 cm — maior que a mão aberta de uma criança.",
     curiosidade: "O bico parece pesado, mas é cheio de bolsas de ar por dentro. Leve como uma esponja.",
     cor_destaque: "#E8A317",
-    credito: "Giles Laurent / Wikimedia Commons / CC BY-SA 4.0"
+    credito: "Giles Laurent / Wikimedia Commons / CC BY-SA 4.0",
+    prompts: [
+      { titulo: "Imagina e escreve", texto: "O bico do tucano parece pesado, mas por dentro é leve como uma esponja. Já te aconteceu de algo parecer uma coisa e ser outra? Conta essa história." },
+      { titulo: "Pesquisa e descobre", texto: "Pra que serve um bico tão grande? Pesquise: o tucano usa esse bico pra quê, no dia a dia dele?" },
+      { titulo: "Compara", texto: "Se o tucano fosse uma pessoa que você conhece, quem seria? Por causa de qual jeito dele?" }
+    ]
   },
   {
     slug: "curicaca",
@@ -63,7 +83,12 @@ window.AVES_DETALHADAS = [
     fato: "Voa em bandos formando um V no céu, anunciando o fim da tarde no cerrado.",
     curiosidade: 'Seu nome vem do próprio canto. Os índios Tupi a chamavam assim porque ela parece dizer o próprio nome.',
     cor_destaque: "#5D7C3F",
-    credito: "Charles J. Sharp / Wikimedia Commons / CC BY-SA 4.0"
+    credito: "Charles J. Sharp / Wikimedia Commons / CC BY-SA 4.0",
+    prompts: [
+      { titulo: "Imagina e escreve", texto: "A curicaca diz o próprio nome quando canta. Se você fosse um pássaro, qual seria seu canto? Escreve aqui — pode inventar palavras, sons, ritmos." },
+      { titulo: "Pesquisa e descobre", texto: "Por que pássaros voam em V? Pesquise — tem uma razão científica bem bonita. Conta o que descobriu." },
+      { titulo: "Observa e desenha", texto: "Imagine o céu no fim da tarde com um bando de curicacas formando um V. Que cores estão no céu? O que o vento faz com as penas? Descreve a cena." }
+    ]
   },
   {
     slug: "pato-mergulhao",
@@ -77,7 +102,12 @@ window.AVES_DETALHADAS = [
     curiosidade: "Mergulha embaixo d'água para caçar. Só vive em rios cristalinos — onde tem pato-mergulhão, a água é pura.",
     cor_destaque: "#2C5F8D",
     ameacado: true,
-    credito: "Sávio Freire Bruno / Wikimedia Commons / CC BY-SA 3.0"
+    credito: "Sávio Freire Bruno / Wikimedia Commons / CC BY-SA 3.0",
+    prompts: [
+      { titulo: "Imagina e escreve", texto: "Existem menos de 250 patos-mergulhões no mundo. Se você pudesse fazer só uma coisa pra proteger esse pássaro, qual seria? Por quê?" },
+      { titulo: "Pesquisa e descobre", texto: "O pato-mergulhão só vive em rios muito limpos. Pesquise: o que está acontecendo com os rios do cerrado? Quem está ajudando?" },
+      { titulo: "Escreve uma carta", texto: "Escreva uma cartinha pro pato-mergulhão. O que você quer dizer pra ele? Pode ser pergunta, conselho, promessa — o que vier." }
+    ]
   }
 ];
 

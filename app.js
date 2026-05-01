@@ -57,6 +57,24 @@ function iniciarApp() {
   app.classList.add("ativo");
   renderBanco();
   renderPagina();
+  bindDrawer();
+}
+
+/* Drawer mobile: abre/fecha sidebar */
+function bindDrawer() {
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("sidebarOverlay");
+  const btnAbrir = document.getElementById("btnAbrirBanco");
+  const btnFechar = document.getElementById("btnFecharBanco");
+  const abrir = () => { sidebar.classList.add("aberta"); overlay.classList.add("ativo"); };
+  const fechar = () => { sidebar.classList.remove("aberta"); overlay.classList.remove("ativo"); };
+  btnAbrir && btnAbrir.addEventListener("click", abrir);
+  btnFechar && btnFechar.addEventListener("click", fechar);
+  overlay && overlay.addEventListener("click", fechar);
+  // ao soltar uma figurinha em um drop, fechar drawer no mobile
+  document.addEventListener("drop", () => {
+    if (window.innerWidth <= 768) fechar();
+  }, true);
 }
 
 /* ─── Sidebar / banco de fotos ───────────────────────────────────────────── */
@@ -230,10 +248,13 @@ function construirEspecie(p, ave) {
           <label>Como me senti:</label>
           <input type="text" data-text-id="${ave.slug}_sentimento" value="${escapeHtml(estado.textos[ave.slug + "_sentimento"] || "")}" placeholder="o que senti vendo este pássaro">
         </div>
-        <div class="box-livre" style="border-color: ${ave.cor_destaque}; background: ${hexLight(ave.cor_destaque, 0.95)};">
-          <div class="titulo-pergunta" style="color: ${ave.cor_destaque};">O que você achou deste pássaro?</div>
-          <textarea data-text-id="${ave.slug}_livre" placeholder="escreva o que quiser...">${escapeHtml(estado.textos[ave.slug + "_livre"] || "")}</textarea>
-        </div>
+        ${(ave.prompts || []).map((p, i) => `
+          <div class="box-livre" style="border-color: ${ave.cor_destaque}; background: ${hexLight(ave.cor_destaque, 0.95)};">
+            <div class="titulo-pergunta" style="color: ${ave.cor_destaque};">${p.titulo}</div>
+            <p class="prompt-texto">${p.texto}</p>
+            <textarea data-text-id="${ave.slug}_p${i}" placeholder="escreva, desenhe com palavras, invente...">${escapeHtml(estado.textos[ave.slug + "_p" + i] || "")}</textarea>
+          </div>
+        `).join("")}
       </div>
     </div>
   `;
