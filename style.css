@@ -975,8 +975,19 @@ input, textarea {
   .pagina {
     width: 100%;
     min-height: auto;
-    padding: 18px 14px 60px;
+    padding: 18px 14px 24px;
     border-radius: 8px;
+  }
+
+  /* Rodapé fora de absolute no mobile — fica no fim do conteúdo */
+  .pagina-rodape {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--linha);
   }
 
   /* Página de espécie em coluna única no mobile */
