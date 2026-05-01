@@ -177,8 +177,7 @@ function criarPagina(idx) {
     const rod = document.createElement("div");
     rod.className = "pagina-rodape";
     rod.innerHTML = `
-      Desenvolvido por Ylvorix Digital Ltda<br>
-      <a href="https://wa.me/5511999381625" target="_blank">WhatsApp: +55 11 99938-1625</a>
+      Desenvolvido por <a href="https://wa.me/5511999381625" target="_blank">Ylvorix Digital Ltda</a>
       &nbsp;·&nbsp; ${idx + 1}/${TOTAL_PAGINAS}
     `;
     div.appendChild(rod);
