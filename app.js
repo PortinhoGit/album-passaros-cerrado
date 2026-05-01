@@ -402,6 +402,8 @@ function construirCreditos(p) {
     </ul>
     <h3>Sobre o mockup</h3>
     <p style="font-size: 0.78rem;">Plataforma desenvolvida como mockup de discussão. Versão 1 — dados salvos localmente no navegador. Não envia informações para nenhum servidor.</p>
+    <h3>Privacidade</h3>
+    <p style="font-size: 0.78rem;">Veja a <a href="privacidade.html" target="_blank">política de privacidade completa</a>: quem é responsável pela pesquisa (Luiza Campos, equipe Unesp), pela infra técnica (Ylvorix Digital Ltda, doação) e o que a plataforma faz (e não faz) com dados.</p>
   `;
 }
 

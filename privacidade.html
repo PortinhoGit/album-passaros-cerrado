@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacidade — Álbum de Pássaros do Cerrado</title>
+  <link rel="stylesheet" href="style.css?v=5">
+  <style>
+    body { background: var(--fundo); padding: 40px 20px; }
+    .doc {
+      max-width: 720px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px 36px;
+      border-radius: 14px;
+      box-shadow: 0 6px 28px rgba(44,36,22,0.10);
+    }
+    .doc h1 {
+      font-size: 1.7rem;
+      color: var(--terra);
+      margin-bottom: 6px;
+    }
+    .doc .data {
+      font-size: 0.78rem;
+      color: var(--texto-claro);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .doc h2 {
+      font-size: 1rem;
+      color: var(--verde);
+      margin-top: 26px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .doc p, .doc li {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      color: var(--texto);
+      margin-bottom: 10px;
+    }
+    .doc ul, .doc ol { margin-left: 22px; }
+    .doc li { margin-bottom: 6px; }
+    .doc a { color: var(--verde); }
+    .doc .voltar {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 10px 22px;
+      background: var(--verde);
+      color: white;
+      border-radius: 22px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .doc .placeholder {
+      background: rgba(232,163,23,0.12);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      color: var(--terra);
+      font-weight: 600;
+    }
+    .doc table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 0.85rem;
+    }
+    .doc th, .doc td {
+      border: 1px solid var(--linha);
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .doc th { background: var(--cinza-claro); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="doc">
+    <h1>Política de Privacidade</h1>
+    <p class="data">Plataforma <strong>Álbum de Pássaros do Cerrado</strong> · Versão 1 (mockup) · 01/05/2026</p>
+
+    <h2>1. Sobre esta plataforma</h2>
+    <p>
+      O <strong>Álbum de Pássaros do Cerrado</strong> é uma plataforma digital criada para acompanhar
+      crianças em tratamento oncológico em sessões de realidade virtual com pássaros do cerrado
+      brasileiro. Faz parte de um projeto de pesquisa científica multi-institucional envolvendo
+      a Universidade Estadual Paulista (Unesp) e a Universidade Cornell.
+    </p>
+
+    <h2>2. Quem é responsável pelo quê</h2>
+    <table>
+      <tr>
+        <th>Papel</th>
+        <th>Quem</th>
+        <th>Responsabilidade</th>
+      </tr>
+      <tr>
+        <td><strong>Pesquisa e dados</strong></td>
+        <td>Luiza Campos<br>(idealizadora do projeto, equipe Unesp)</td>
+        <td>Decisões sobre o projeto, contato com participantes e familiares, ética da pesquisa, eventual coleta de dados para fins científicos.</td>
+      </tr>
+      <tr>
+        <td>Pesquisa clínica</td>
+        <td>Débora <span class="placeholder">[sobrenome a confirmar]</span><br>(doutoranda, Unesp)</td>
+        <td>Avaliação dos marcadores laboratoriais e correlação com o uso da plataforma.</td>
+      </tr>
+      <tr>
+        <td>Realidade virtual</td>
+        <td>Universidade Cornell</td>
+        <td>Modelagem dos pássaros em VR.</td>
+      </tr>
+      <tr>
+        <td>Aprovação ética</td>
+        <td>Comitê de Ética em Pesquisa (CEP/Conep) da Unesp</td>
+        <td>Aprovação institucional, validação do TCLE.</td>
+      </tr>
+      <tr>
+        <td><strong>Desenvolvimento técnico (doação)</strong></td>
+        <td>Ylvorix Digital Ltda</td>
+        <td>Construiu e cedeu a plataforma à equipe de pesquisa, sem ônus. <strong>Não tem acesso a dados das crianças nem responsabilidade sobre eles.</strong></td>
+      </tr>
+      <tr>
+        <td>Hospedagem técnica</td>
+        <td>GitHub Inc. (GitHub Pages)</td>
+        <td>Servidor que entrega os arquivos da plataforma. Mantém logs operacionais básicos (IP, navegador) conforme a <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank">política de privacidade do GitHub</a>.</td>
+      </tr>
+    </table>
+
+    <h2>3. Quais dados a plataforma coleta</h2>
+    <p><strong>Nenhum.</strong> A plataforma é puramente cliente — todo o conteúdo digitado pela criança (nome, textos das perguntas, fotos arrastadas) é salvo <strong>exclusivamente no navegador do dispositivo</strong> que ela está usando, em uma área chamada <code>localStorage</code>.</p>
+    <ul>
+      <li>Nada é enviado para servidores.</li>
+      <li>Não há banco de dados.</li>
+      <li>Não há login, conta, autenticação.</li>
+      <li>Não há rastreadores, pixels, analytics, redes sociais embutidas.</li>
+      <li>Não há cookies — por isso não exibimos banner de cookies.</li>
+    </ul>
+
+    <h2>4. O que isso significa na prática</h2>
+    <ul>
+      <li>Se a criança limpar os dados do navegador, o álbum some.</li>
+      <li>Se ela abrir em outro dispositivo, o conteúdo não aparece (não sincroniza).</li>
+      <li>Ninguém — nem a equipe de pesquisa, nem a Ylvorix, nem o GitHub — consegue ler o que ela escreveu, a menos que ela mostre a tela diretamente.</li>
+      <li>A impressão (botão "Imprimir álbum") gera um PDF/papel <strong>local</strong> no dispositivo. Nada sobe para a internet.</li>
+    </ul>
+
+    <h2>5. Coleta de dados para fins científicos</h2>
+    <p>
+      Esta plataforma, por si só, <strong>não coleta dados para a pesquisa</strong>. Caso a equipe da pesquisa
+      decida usar trechos escritos pelas crianças como material analítico, isso será feito de forma
+      separada — pedindo à criança e ao responsável que compartilhem o álbum impresso ou o conteúdo
+      digital, com consentimento formal via <strong>Termo de Consentimento Livre e Esclarecido (TCLE)</strong>
+      aprovado pelo CEP/Conep.
+    </p>
+
+    <h2>6. Segurança</h2>
+    <ul>
+      <li>O acesso ao site é feito sempre via <strong>HTTPS</strong> (criptografia de transporte).</li>
+      <li>Certificado emitido por Let's Encrypt, com renovação automática.</li>
+      <li>O código-fonte é público e auditável em <a href="https://github.com/PortinhoGit/album-passaros-cerrado" target="_blank">github.com/PortinhoGit/album-passaros-cerrado</a>.</li>
+    </ul>
+
+    <h2>7. Crianças e adolescentes</h2>
+    <p>
+      A plataforma é voltada para crianças e adolescentes em tratamento. Como não há coleta
+      de dados pessoais, a participação é mediada pelo responsável legal e pela equipe de pesquisa
+      no contexto hospitalar, sob o TCLE aprovado pela instituição.
+    </p>
+
+    <h2>8. Mudanças nesta política</h2>
+    <p>
+      Esta é a <strong>versão 1 (mockup)</strong>. A política definitiva será revisada e finalizada pela equipe
+      de pesquisa antes do uso da plataforma com participantes reais.
+    </p>
+
+    <h2>9. Contato</h2>
+    <p>
+      <strong>Sobre a pesquisa, dados e participação:</strong><br>
+      Luiza Campos — equipe de pesquisa Unesp<br>
+      <span class="placeholder">[e-mail e instituição a definir pela Luiza]</span>
+    </p>
+    <p>
+      <strong>Sobre questões técnicas da plataforma (bugs, acessibilidade):</strong><br>
+      Ylvorix Digital Ltda — <a href="https://wa.me/5511999381625">WhatsApp +55 11 99938-1625</a>
+    </p>
+
+    <p style="margin-top: 28px; font-size: 0.78rem; color: var(--texto-claro); font-style: italic; border-top: 1px solid var(--linha); padding-top: 16px;">
+      <strong>Base legal (LGPD):</strong> como não há tratamento de dados pessoais por esta plataforma,
+      não se aplicam as bases legais da Lei 13.709/2018 ao funcionamento dela. Eventual coleta de dados
+      pelo time de pesquisa será regida pelo TCLE e pela aprovação institucional.
+    </p>
+
+    <a href="index.html" class="voltar">← Voltar ao álbum</a>
+  </div>
+</body>
+</html>

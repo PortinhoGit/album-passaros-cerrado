@@ -857,15 +857,15 @@ input, textarea {
 }
 .pag-creditos a { color: var(--verde); text-decoration: underline; word-break: break-all; }
 
-/* Rodapé universal das páginas */
+/* Rodapé universal das páginas — estático na tela, absolute na impressão */
 .pagina-rodape {
-  position: absolute;
-  bottom: 8mm;
-  left: 15mm;
-  right: 15mm;
+  margin-top: 36px;
+  padding-top: 14px;
+  border-top: 1px solid var(--linha);
   text-align: center;
-  font-size: 0.62rem;
+  font-size: 0.65rem;
   color: var(--texto-claro);
+  line-height: 1.6;
 }
 .pagina-rodape a { color: var(--verde); text-decoration: underline; }
 
@@ -979,16 +979,8 @@ input, textarea {
     border-radius: 8px;
   }
 
-  /* Rodapé fora de absolute no mobile — fica no fim do conteúdo */
-  .pagina-rodape {
-    position: static;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    margin-top: 28px;
-    padding-top: 16px;
-    border-top: 1px solid var(--linha);
-  }
+  /* Rodapé já é estático por padrão — só ajusta margin no mobile */
+  .pagina-rodape { margin-top: 24px; padding-top: 12px; }
 
   /* Página de espécie em coluna única no mobile */
   .pag-especie .header-num { font-size: 36px; top: 6mm; left: 14px; }
@@ -1044,4 +1036,14 @@ input, textarea {
   .dropzone .placeholder { display: none; }
   .figurinha { display: none; }
   textarea, input { border: none !important; }
+  /* Na impressão, rodapé volta a ficar fixo no canto inferior do A4 */
+  .pagina-rodape {
+    position: absolute;
+    bottom: 8mm;
+    left: 15mm;
+    right: 15mm;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
