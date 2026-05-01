@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Álbum de Pássaros do Cerrado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela inicial: capa ilustrada -->
+  <section class="tela-capa" id="telaCapa">
+
+    <!-- Silhueta do Brasil ao fundo -->
+    <svg class="brasil-bg" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M155,20 C175,18 200,22 225,28 C250,35 270,45 285,60 C300,72 310,88 318,105 C325,120 332,138 340,158 C348,180 355,200 358,222 C360,245 358,265 352,285 C345,308 332,328 318,348 C305,365 290,380 270,395 C248,410 225,420 200,425 C175,430 150,428 125,420 C100,410 80,395 65,375 C50,355 42,332 38,308 C35,282 38,255 45,228 C52,200 65,175 78,152 C90,128 100,105 110,82 C118,62 128,42 140,30 C145,25 150,22 155,20 Z" />
+      <!-- destaque cerrado -->
+      <path class="cerrado-zone" d="M150,110 C175,105 200,108 220,118 C240,130 252,148 258,170 C262,192 258,215 248,235 C235,258 215,275 190,282 C168,288 145,283 128,272 C112,258 102,238 100,215 C98,192 105,168 118,148 C128,132 138,118 150,110 Z" />
+    </svg>
+
+    <!-- Folhas decorativas -->
+    <svg class="folha folha-tl" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M10,180 Q15,140 25,100 Q40,55 70,30 Q55,75 50,120 Q48,150 45,180 Z" fill="#5D7C3F"/>
+      <path d="M50,150 L70,135 M50,130 L72,110 M50,110 L73,85" stroke="#3a5226" stroke-width="1.5" fill="none"/>
+    </svg>
+    <svg class="folha folha-br" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M90,20 Q85,60 75,100 Q60,145 30,170 Q45,125 50,80 Q52,50 55,20 Z" fill="#8B4513"/>
+      <path d="M50,50 L30,65 M50,70 L28,90 M50,90 L27,115" stroke="#5a2d0a" stroke-width="1.5" fill="none"/>
+    </svg>
+
+    <!-- Flor do ipê -->
+    <svg class="ipe ipe-tr" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <g fill="#E8A317">
+        <ellipse cx="40" cy="22" rx="9" ry="13" transform="rotate(-20 40 22)"/>
+        <ellipse cx="55" cy="35" rx="9" ry="13" transform="rotate(40 55 35)"/>
+        <ellipse cx="50" cy="55" rx="9" ry="13" transform="rotate(110 50 55)"/>
+        <ellipse cx="28" cy="50" rx="9" ry="13" transform="rotate(180 28 50)"/>
+        <ellipse cx="25" cy="30" rx="9" ry="13" transform="rotate(-90 25 30)"/>
+      </g>
+      <circle cx="40" cy="40" r="6" fill="#A0392E"/>
+    </svg>
+
+    <div class="capa-conteudo">
+
+      <div class="capa-titulo-bloco">
+        <p class="capa-orelha">Pesquisa Unesp · Cornell</p>
+        <h1>
+          <span class="t-grande">PÁSSAROS</span>
+          <span class="t-medio">DO</span>
+          <span class="t-grande">CERRADO</span>
+        </h1>
+        <div class="ornamento-divider">
+          <span class="o-line"></span>
+          <span class="o-dot"></span>
+          <span class="o-line"></span>
+        </div>
+        <p class="subtitulo">Uma viagem com asas pelo<br>coração do Brasil</p>
+      </div>
+
+      <div class="capa-foto-bloco">
+        <!-- Sol/raios atrás da ave -->
+        <svg class="sol" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="grad-sol" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FCE9C0" stop-opacity="0.9"/>
+              <stop offset="60%" stop-color="#E8A317" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#E8A317" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="200" cy="200" r="180" fill="url(#grad-sol)"/>
+          <g stroke="#E8A317" stroke-width="2" stroke-linecap="round" opacity="0.45">
+            <line x1="200" y1="20" x2="200" y2="50"/>
+            <line x1="200" y1="350" x2="200" y2="380"/>
+            <line x1="20" y1="200" x2="50" y2="200"/>
+            <line x1="350" y1="200" x2="380" y2="200"/>
+            <line x1="73" y1="73" x2="95" y2="95"/>
+            <line x1="305" y1="95" x2="327" y2="73"/>
+            <line x1="73" y1="327" x2="95" y2="305"/>
+            <line x1="305" y1="305" x2="327" y2="327"/>
+          </g>
+        </svg>
+
+        <div class="foto-capa-rica">
+          <div class="foto-anel-externo"></div>
+          <div class="foto-anel-medio"></div>
+          <div class="foto-imagem" style="background-image: url('banco-aves/seriema.jpg');"></div>
+        </div>
+
+        <!-- Pena flutuante -->
+        <svg class="pena-decor" viewBox="0 0 60 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M30,5 Q35,40 30,75 Q28,95 25,115" stroke="#A0392E" stroke-width="1.2" fill="none"/>
+          <g fill="#A0392E" opacity="0.85">
+            <path d="M30,15 Q15,18 12,25 Q22,22 30,22 Z"/>
+            <path d="M30,25 Q12,30 10,40 Q22,35 30,33 Z"/>
+            <path d="M30,38 Q10,45 8,58 Q22,50 30,48 Z"/>
+            <path d="M30,52 Q12,60 12,72 Q24,65 30,62 Z"/>
+            <path d="M30,15 Q45,18 48,25 Q38,22 30,22 Z"/>
+            <path d="M30,25 Q48,30 50,40 Q38,35 30,33 Z"/>
+            <path d="M30,38 Q50,45 52,58 Q38,50 30,48 Z"/>
+            <path d="M30,52 Q48,60 48,72 Q36,65 30,62 Z"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="bloco-nome">
+        <label for="inputNome">Qual é o seu nome?</label>
+        <input type="text" id="inputNome" placeholder="Escreva aqui..." value="Luiza" autocomplete="off">
+        <button class="btn-comecar" id="btnComecar">
+          <span>Começar minha jornada</span>
+          <span class="seta">→</span>
+        </button>
+      </div>
+
+      <div class="capa-rodape">
+        <span class="selo-mockup">MOCKUP — PROJETO EM DESENVOLVIMENTO</span>
+        <span class="capa-credito">Desenvolvido por <strong>Ylvorix Digital Ltda</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- App principal (sidebar + páginas) -->
+  <main class="app" id="app">
+
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>BANCO DE FIGURINHAS</h2>
+        <p>Arraste a foto certa para cada pássaro</p>
+      </div>
+      <div class="sidebar-busca">
+        <input type="text" id="busca" placeholder="🔍 procurar pássaro...">
+      </div>
+      <div class="banco-aves" id="bancoAves"></div>
+    </aside>
+
+    <section class="principal">
+      <div class="topbar">
+        <div class="topbar-info">
+          <span class="ola">Olá, <strong id="nomeUsuario">amiga</strong>!</span>
+        </div>
+        <div class="nav-paginas">
+          <button id="btnAnt" title="Página anterior">←</button>
+          <span class="indicador" id="indicador">1 / 15</span>
+          <button id="btnProx" title="Próxima página">→</button>
+        </div>
+        <button class="btn-imprimir" id="btnImprimir">🖨️ Imprimir álbum</button>
+      </div>
+
+      <div class="stage" id="stage"></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="aves.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
