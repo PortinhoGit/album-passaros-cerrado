@@ -61,20 +61,22 @@ function iniciarApp() {
 }
 
 /* Drawer mobile: abre/fecha sidebar */
+let drawerAbrir = () => {};
+let drawerFechar = () => {};
+let dragDropCorreto = false;
+
+function isMobile() { return window.innerWidth <= 768; }
+
 function bindDrawer() {
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("sidebarOverlay");
   const btnAbrir = document.getElementById("btnAbrirBanco");
   const btnFechar = document.getElementById("btnFecharBanco");
-  const abrir = () => { sidebar.classList.add("aberta"); overlay.classList.add("ativo"); };
-  const fechar = () => { sidebar.classList.remove("aberta"); overlay.classList.remove("ativo"); };
-  btnAbrir && btnAbrir.addEventListener("click", abrir);
-  btnFechar && btnFechar.addEventListener("click", fechar);
-  overlay && overlay.addEventListener("click", fechar);
-  // ao soltar uma figurinha em um drop, fechar drawer no mobile
-  document.addEventListener("drop", () => {
-    if (window.innerWidth <= 768) fechar();
-  }, true);
+  drawerAbrir = () => { sidebar.classList.add("aberta"); overlay.classList.add("ativo"); };
+  drawerFechar = () => { sidebar.classList.remove("aberta"); overlay.classList.remove("ativo"); };
+  btnAbrir && btnAbrir.addEventListener("click", drawerAbrir);
+  btnFechar && btnFechar.addEventListener("click", drawerFechar);
+  overlay && overlay.addEventListener("click", drawerFechar);
 }
 
 /* ─── Sidebar / banco de fotos ───────────────────────────────────────────── */
@@ -100,8 +102,15 @@ function renderBanco(filtro = "") {
         if (usada) { e.preventDefault(); return; }
         e.dataTransfer.setData("text/plain", a.slug);
         div.classList.add("dragging");
+        dragDropCorreto = false;
+        // mobile: recolhe o drawer para liberar a área de drop
+        if (isMobile()) drawerFechar();
       });
-      div.addEventListener("dragend", () => div.classList.remove("dragging"));
+      div.addEventListener("dragend", () => {
+        div.classList.remove("dragging");
+        // mobile: se o drop não acertou (cancelado ou slug errado), reabre o drawer
+        if (isMobile() && !dragDropCorreto) drawerAbrir();
+      });
       bancoEl.appendChild(div);
     });
 }
@@ -420,6 +429,7 @@ function bindDropzones(container, ave) {
       const slug = e.dataTransfer.getData("text/plain");
       const target = dz.dataset.target;
       if (slug === target) {
+        dragDropCorreto = true;
         estado.drops[target] = slug;
         salvar();
         toast(`Boa! Você encontrou a ${nomeFromSlug(slug)} 🪶`);

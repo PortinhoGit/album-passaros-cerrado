@@ -996,6 +996,9 @@ input, textarea {
   /* Galeria 2 colunas no mobile */
   .galeria-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
 
+  /* Banco de figurinhas: coluna única no mobile (drawer estreito) */
+  .banco-aves { grid-template-columns: 1fr; gap: 8px; }
+
   /* Índice — 4 colunas em vez de 6 */
   .pag-indice .grid { grid-template-columns: repeat(4, 1fr); }
 

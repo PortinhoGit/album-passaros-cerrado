@@ -27,7 +27,8 @@
   <meta name="twitter:description" content="Plataforma para crianças em tratamento oncológico colecionarem pássaros do cerrado em sessões de realidade virtual.">
   <meta name="twitter:image" content="https://passaroscerrado.portinho.me/og-image.jpg">
 
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mobile-drag-drop@2.3.0-rc.2/default.css">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
@@ -100,7 +101,17 @@
 
   <div class="toast" id="toast"></div>
 
-  <script src="aves.js?v=7"></script>
-  <script src="app.js?v=7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mobile-drag-drop@2.3.0-rc.2/release/index.min.js"></script>
+  <script>
+    // Polyfill HTML5 drag-and-drop em iOS Safari / Android Chrome touch
+    if (window.MobileDragDrop && typeof MobileDragDrop.polyfill === "function") {
+      MobileDragDrop.polyfill({
+        dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride,
+        holdToDrag: 200
+      });
+    }
+  </script>
+  <script src="aves.js?v=8"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>
